@@ -28,8 +28,8 @@ public class MybatisDataSource {
 	
 	@Bean(destroyMethod = "close")
 	public DataSource dataSource() {		
-		DataSourceProperties config = dataSourceProperties;		
-		this.pool = new org.apache.tomcat.jdbc.pool.DataSource();		
+		DataSourceProperties config = dataSourceProperties;
+		this.pool = new org.apache.tomcat.jdbc.pool.DataSource();
 		this.pool.setDriverClassName(config.getDriverClassName());
 		this.pool.setUrl(config.getUrl());
 		if (config.getUsername() != null) {

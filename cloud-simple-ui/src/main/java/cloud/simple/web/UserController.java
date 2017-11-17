@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import cloud.simple.model.User;
-import cloud.simple.service.UserServiceProvider.FeignUserService;
+//import cloud.simple.service.UserServiceProvider.FeignUserService;
 import cloud.simple.service.UserService;
 
 
@@ -26,8 +26,8 @@ public class UserController {
 	@Autowired
 	UserService userService;
 	
-	@Autowired
-	FeignUserService feignUserService;
+//	@Autowired
+//	FeignUserService feignUserService;
 	
 	@RequestMapping(value="/users")
 	public ResponseEntity<List<User>> readUserInfo(){
