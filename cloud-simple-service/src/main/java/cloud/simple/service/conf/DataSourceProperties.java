@@ -7,7 +7,7 @@ public class DataSourceProperties {
 
 	//对应配置文件里的配置键
 	public final static String DS="mysqldb.datasource";	
-	private String driverClassName;
+	private String driverclassname;
 	
 	private String url;
 	private String username;
@@ -18,12 +18,12 @@ public class DataSourceProperties {
 	private int initialSize = 10;
 	private String validationQuery;
 
-	public String getDriverClassName() {
-		return driverClassName;
+	public String getDriverclassname() {
+		return driverclassname;
 	}
 
-	public void setDriverClassName(String driverClassName) {
-		this.driverClassName = driverClassName;
+	public void setDriverclassname(String driverclassname) {
+		this.driverclassname = driverclassname;
 	}
 
 	public String getUrl() {

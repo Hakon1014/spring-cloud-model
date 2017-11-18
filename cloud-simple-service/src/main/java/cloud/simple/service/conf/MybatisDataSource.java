@@ -30,7 +30,7 @@ public class MybatisDataSource {
 	public DataSource dataSource() {		
 		DataSourceProperties config = dataSourceProperties;
 		this.pool = new org.apache.tomcat.jdbc.pool.DataSource();
-		this.pool.setDriverClassName(config.getDriverClassName());
+		this.pool.setDriverClassName(config.getDriverclassname());
 		this.pool.setUrl(config.getUrl());
 		if (config.getUsername() != null) {
 			this.pool.setUsername(config.getUsername());

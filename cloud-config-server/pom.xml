@@ -82,6 +82,21 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+        <!-- 自动刷新远程配置 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+        <!--RMQ-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+        <!--自动推送-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-monitor</artifactId>
+        </dependency>
 	</dependencies>
 
 	<build>
@@ -92,6 +107,22 @@
 			</plugin>
 		</plugins>
 		<defaultGoal>compile</defaultGoal>
+		<!--<resources>-->
+			<!--<resource>-->
+				<!--<directory>src/main/resources</directory>-->
+				<!--<filtering>true</filtering>-->
+				<!--<excludes>-->
+					<!--<exclude>**/*.jks</exclude>-->
+				<!--</excludes>-->
+			<!--</resource>-->
+			<!--<resource>-->
+				<!--<directory>src/main/resources</directory>-->
+				<!--<filtering>false</filtering>-->
+				<!--<includes>-->
+					<!--<include>**/*.jks</include>-->
+				<!--</includes>-->
+			<!--</resource>-->
+		<!--</resources>-->
 	</build>
 
 </project>
