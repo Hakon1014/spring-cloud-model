@@ -1,8 +1,5 @@
 package cloud.simple.service.conf;
 
-import javax.annotation.PreDestroy;
-import javax.sql.DataSource;
-
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -13,6 +10,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
+
+import javax.annotation.PreDestroy;
+import javax.sql.DataSource;
 
 @Configuration
 @EnableConfigurationProperties(DataSourceProperties.class)
@@ -29,6 +29,9 @@ public class MybatisDataSource {
 	@Bean(destroyMethod = "close")
 	public DataSource dataSource() {		
 		DataSourceProperties config = dataSourceProperties;
+
+		System.err.println(config.getHello()+" =========================================");
+
 		this.pool = new org.apache.tomcat.jdbc.pool.DataSource();
 		this.pool.setDriverClassName(config.getDriverclassname());
 		this.pool.setUrl(config.getUrl());

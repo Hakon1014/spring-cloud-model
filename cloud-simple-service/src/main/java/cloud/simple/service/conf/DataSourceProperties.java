@@ -18,6 +18,16 @@ public class DataSourceProperties {
 	private int initialSize = 10;
 	private String validationQuery;
 
+	private String hello;
+
+	public String getHello() {
+		return hello;
+	}
+
+	public void setHello(String hello) {
+		this.hello = hello;
+	}
+
 	public String getDriverclassname() {
 		return driverclassname;
 	}
