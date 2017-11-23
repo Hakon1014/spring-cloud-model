@@ -24,4 +24,5 @@ public class UserService {
 		List<User> list = userMapper.findAll();
 		return list;
 	}
+
 }
